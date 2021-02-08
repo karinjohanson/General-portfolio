@@ -4,3 +4,12 @@ Continuously updated repository, created in order to demonstrate my general know
 ## Table of content
 
 ### 1. [Console-based multiplication table (JavaScript, January 2021)](https://github.com/karinjohanson/General-portfolio/blob/main/Multiplication%20table.js)
+
+Prints the multiplication table into the console.
+The description of the program is added into the file as a comment.
+
+### 2. [Triangles of numbers (JavaScript, January 2021)](https://github.com/karinjohanson/General-portfolio/blob/main/Triangles_of_numbers.js)
+
+The aim of this program is to create triangles out of numbers into the console using only ONE cycle, whereas the number of conditional statements (if, else if, else) or variables is not limited.
+
+The description of the program is added into the file as a comment.
