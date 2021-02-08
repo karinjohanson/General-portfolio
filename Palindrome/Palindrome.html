@@ -1,0 +1,50 @@
+<!-- 
+    Checks whether the inserted word or phrase is a palindrome. 
+    Displays the result to the user - is it a palindrome or not.
+    The code is case insensitive.
+    The code removes spaces from the input.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- This code is created by GitHub user karinjohanson -->
+    <meta name="author" content="karinjohanson">
+    <link rel="stylesheet" href="Palindrome.css">
+    <title>Palindrome detector</title>
+</head>
+
+<body>
+    <div>
+        <div>
+            <h1>Is it a palindrome or not?</h1>
+            <h1>?ton ro emordnilap a ti sI</h1>
+        </div>
+        <p>Submit your word or scentence and find out whether it is a palindrome or not.</p>
+        <p>Your word or scentence can contain up to 50 characters.</p>
+        <!-- The following paragraph is acting like a label for the input-field -->
+        <p>Enter your word here:</p>
+        <!-- The user input-field. The length of the input is limited. -->
+        <input type="text" id="testInput" placeholder="Potential palindrome" maxlength="50" autofocus>
+        <!-- Clicking the button will trigger a function in JavaScript, which checks wether the user input was a palindrome -->
+        <button onclick="checkThepalindromeTwo()">Check</button>
+        <!-- The reset-button will clear the input -->
+        <button onclick="resetTheinputAndoutput()">Reset</button>
+        <br>
+        <p class="outputMessage">You wanted to know whether</p>
+        <p id="reflectedOutput"></p>
+        <p class="outputMessage">is a palindrome.</p>
+        <p class="outputMessage">The answer is:</p>
+        <div id="resultDiv">
+            <p id="resultOutput"></p>
+        </div>
+        <div id="resultPicture"></div>
+        <p id="reference"></p>
+    </div>
+    <!-- The scripts for JavaScript functions are located in the external js-file -->
+    <script src="Palindrome.js"></script>
+</body>
+
+</html>
