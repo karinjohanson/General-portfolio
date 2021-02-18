@@ -1,4 +1,5 @@
-This Readme is written in estonian. For summary in english, check [Summary in english]()
+This Readme is written in estonian. For summary in english, check [Summary in english](https://github.com/karinjohanson/General-portfolio/blob/main/AppleSorter/Readme.md#summary-in-english)
+
 # ÕUNASORTEERIJA
 ## LÄHTEÜLESANNE
 Õunasorteerija OÜ  tegeleb õunte sorteerimisega ja selleks on neil automaatne sorteerimisrobot. Sorteerimisrobot sorteerib õunu kaalu järgi kolme kasti:
@@ -22,7 +23,7 @@ Lahendusena esitada nii algoritm kui ka kood. Vajadusel tuleb olla valmis oma la
 Juhul kui sorteerimine ei toimu vahetult pärast kaalumist, on vaja õuntele külge panna id, mille järgi tuntakse ära, et tegu on just selle õunaga, mille mass oli nii- või naapalju, sest nagu tootmisprotsessides tihti juhtub, võib põhjusel või teisel liinilt vahel midagi kaduma minna või võib juhtuda, et eelmine õun jääb liinile kuskile toppama ja järgmine jõuab temast ette. Seejuures ei mängi olulist rolli, kas liin on horisontaalse või vertikaalse asetusega. Õunte individuaalset märgistamine oleks siinkohal märgatavalt ressursikulukam kui sorteerida nad kaalumisel, mistõttu lähtun programmi kirjutamisel liinist, mille puhul ei tule õunu identifitseerida.
 
 Erineva ehitusega liinid mõjutavad nõudeid programmile:
-![Different machines](https://github.com/karinjohanson/entry-level-programming/blob/main/applesorter/Different_machines.png)
+![Different machines](https://github.com/karinjohanson/General-portfolio/blob/main/AppleSorter/Different_machines.png)
 
 Üheks küsimuseks on samuti, mis käivitab programmi. Mõistlik oleks käivitajaks määrata õuna saabumine sorteerijasse. Mille järgi saabumist määratakse? Kui õuna saabumist sorteerijasse registreerib näiteks fotosilm, siis tuleb arvestada, et peame programmi sisse kirjutama ka vigade välistamise ehk siis kui fotosilm on näiteks puhastamata ja registreerib õuna saabumise, kuigi seda tegelikkuses ei juhtunud, siis võib meie väikeste õunte kasti sattuda olematuid õunu massiga 0g. Need peaksime programmis välistama.
 
@@ -36,10 +37,10 @@ Reaalses tootmises peaks samuti mõtlema juhtudele, kui täpselt sama massiga õ
 
 ### 1.1. Vooskeem
 Lihtsustatult võiks õunte sorteerimise protsessi kirjeldada järgmine vooskeem:
-![Simple_flowchart](https://github.com/karinjohanson/entry-level-programming/blob/main/applesorter/Simple%20_flowchart.png)
+![Simple_flowchart](https://github.com/karinjohanson/General-portfolio/blob/main/AppleSorter/Simple%20_flowchart.png)
 
 Õunte sorteerimise täpsustatud vooskeem:
-![Program_flowchart](https://github.com/karinjohanson/entry-level-programming/blob/main/applesorter/Program_flowchart.png)
+![Program_flowchart](https://github.com/karinjohanson/General-portfolio/blob/main/AppleSorter/Program_flowchart.png)
 
 ## 2. KOOD
 Koodi JavaScript ja Java faili versioonis ei pöörata praegu tähelepanu veahaldusele ega kasutajasisendi valideerimisele. See on plaanis teha edaspidistes arendusfaasides. Siiski, JavaScripti HTML rakenduses on kasutaja sisendi valideerimine lisatud.
@@ -49,7 +50,7 @@ Koodi JavaScript ja Java faili versioonis ei pöörata praegu tähelepanu veahal
 
 Koodis otsustasin ma kokku tõsta vooskeemis esimesel ja viimasel kohal näidatud tingimuste kaalumise (kui õun kaalub alla 10 g või üle 500 g).
 
-Õunasorteerija JavaScript koodiga fail on leitav [siit](https://github.com/karinjohanson/entry-level-programming/blob/main/applesorter/applesorter.js).
+Õunasorteerija JavaScript koodiga fail on leitav [siit](https://github.com/karinjohanson/General-portfolio/blob/main/AppleSorter/AppleSorter_JavaScript/applesorter.js).
 
 #### Juhised koodi jooksutamiseks
 1.	Sisesta kood brauseri konsooli ja vajuta `Enter`.
@@ -68,16 +69,18 @@ Kui on soov funktsiooni jooksutamisega jätkata ja lisada sorteerijasse veel õu
 
 #### Koodi rakendamine
 Selleks, et illustreerida paremini koodi toimimist, lõin lihtsa HTML-lehe, mille kaudu kasutaja saab täita õunu kaaluva kaalu aset ning sisestada kaalutud õunte massid programmi sisestusvälja ja nupuvajutuse abil. Vaikimisi eeldatakse, et sorteerimistsükkel jätkub. Tsükli lõpetab vajutus nupule `Quit`. <br>
-Erinevalt puhtast JavaScript koodist ([siin](https://github.com/karinjohanson/entry-level-programming/blob/main/applesorter/applesorter.js)), kontrollitakse [selles rakenduses](https://github.com/karinjohanson/entry-level-programming/blob/main/applesorter/applesorterImplementation.html) kasutaja sisestatud väärtuste tüübi vastavust nõutule ning kogumassi arvutamiseks teisendatakse sisestatu numbriteks. Konsoolipõhises lahenduses pole see tarvilik.
+Erinevalt puhtast JavaScript koodist ([siin](https://github.com/karinjohanson/General-portfolio/blob/main/AppleSorter/AppleSorter_JavaScript/applesorter.js)), kontrollitakse [selles rakenduses](https://github.com/karinjohanson/General-portfolio/blob/main/AppleSorter/AppleSorter_JavaScript/AppleSorter_JS_in_HTML.html) kasutaja sisestatud väärtuste tüübi vastavust nõutule ning kogumassi arvutamiseks teisendatakse sisestatu numbriteks. Konsoolipõhises lahenduses pole see tarvilik.
 
 ### 2.2 Java
-Õunasorteerija Java programm on tehtud sama programmi [JavaScripti versiooni](https://github.com/karinjohanson/entry-level-programming/blob/main/applesorter/applesorter.js) põhjal.
+Õunasorteerija Java programm on tehtud sama programmi [JavaScripti versiooni](https://github.com/karinjohanson/General-portfolio/blob/main/AppleSorter/AppleSorter_JavaScript/applesorter.js) põhjal.
 Programm võimaldab tühikuteta kasutajasisendit komadega eraldatud arvurea kujul. 
 
-Õunasorteerija Java koodiga fail on leitav [siit](https://github.com/karinjohanson/entry-level-programming/blob/main/applesorter/AppleSorter.java)
+Õunasorteerija Java koodiga fail on leitav [siit](https://github.com/karinjohanson/General-portfolio/blob/main/AppleSorter/AppleSorter_Java/AppleSorter.java)
 
 ## SUMMARY IN ENGLISH
 A simple program which sorts the items, in this particular case apples, accordingly to requirements.
-Applesorter is written in two different languages: JavaScript and Java.
-No error handling is included at the moment.
-In order to illustrate the solution I also created a simple implementation - a HTML page, whereto on the input field the apple weights can be stated, and the program outputs the stats for them.
+Applesorter is written in two different languages: [JavaScript](https://github.com/karinjohanson/General-portfolio/blob/main/AppleSorter/AppleSorter_JavaScript/applesorter.js) and [Java](https://github.com/karinjohanson/General-portfolio/blob/main/AppleSorter/AppleSorter_Java/AppleSorter.java).
+
+***No error handling is included at the moment.***
+
+In order to illustrate the solution I also created a simple implementation - a [HTML page](https://github.com/karinjohanson/General-portfolio/blob/main/AppleSorter/AppleSorter_JavaScript/AppleSorter_JS_in_HTML.html), whereto on the input field the apple weights can be stated, and the program outputs the stats for them.
