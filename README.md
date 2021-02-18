@@ -19,4 +19,9 @@ The description of the program is added into the file as a comment.
 The program checks whether the user input is a palindrome or not.
 The result is not intended to demonstrate the CSS-skills of the author.
 
+### 4. [Applesorter (JavaScript and Java, February 2021)]()
+A simple program which sorts the items, in this particular case apples, accordingly to requirements.
+Applesorter is written in two different languages: JavaScript and Java.
+No error handling is included at the moment.
+In order to illustrate the solution I also created a simple implementation - a HTML page, whereto on the input field the apple weights can be stated, and the program outputs the stats for them.
 

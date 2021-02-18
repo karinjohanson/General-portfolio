@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- This code is created by GitHub user karinjohanson -->
+    <meta name="author" content="karinjohanson">
+    <title>Applesorter</title>
+    <!-- Styling is added due readability purposes only -->
+    <style>
+        #container {
+            text-align: center;
+        }
+
+        #container p {
+            text-align: left;
+            margin-left: 10vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Applesorter</h1>
+        <label for="appleWeights">Insert apple weights:</label>
+        <input type="text" id="appleWeights">
+        <!-- "Sort apples" button behaves as "continue" option -->
+        <button id="addApples">Sort apples</button>
+        <!-- The reset-button will clear the input -->
+        <button id="startOver">Quit</button>
+        <!-- This is the paragraph whereto the results will be displayed-->
+        <p id="outputValue"></p>
+    </div>
+    <script>
+        const outputElement = document.getElementById("outputValue");
+        const inputElement = document.getElementById("appleWeights");
+        const continueSorting = document.getElementById("addApples");
+        const quitSorting = document.getElementById("startOver");
+
+        const scrap = [];
+        const small = [];
+        const medium = [];
+        const big = [];
+        const sortedApples = [small, medium, big];
+        let totalWeightSmall = 0;
+        let totalWeightMedium = 0;
+        let totalWeightBig = 0;
+        let appleCount = 0;
+
+        // Button click triggers the sorting and continuing as well as quitting option 
+        continueSorting.addEventListener("click", appleSorter);
+        quitSorting.addEventListener("click", function () {
+            location.reload();
+        });
+
+        function appleSorter() {
+            let apple;
+            // Remove unnecessary whitespace from userinput
+            const rawInput = inputElement.value.replace(/\s/g, "");
+            // Check whether the input contains other characters besides numbers and commas
+            const containsCharsNotAllowed = (/[^\d,]/g).test(rawInput);
+            // If not, starts sorting
+            if (containsCharsNotAllowed === false) {
+                const apples = rawInput.split(",");
+                for (apple of apples) {
+                    if ((apple < 10) || (apple > 500)) {
+                        scrap.push(apple);
+                    } else if (apple <= 50) {
+                        /*
+                         Calculating total weight was not required. 
+                         parseInt converts string to integer
+                         */
+                        totalWeightSmall += parseInt(apple);
+                        small.push(apple);
+                    } else if (apple <= 70) {
+                        totalWeightMedium += parseInt(apple);
+                        medium.push(apple);
+                    } else {
+                        totalWeightBig += parseInt(apple);
+                        big.push(apple);
+                    }
+                }
+                // Sums the amount of sorted apples
+                appleCount = small.length + medium.length + big.length;
+                // Displays result and stats
+                outputElement.innerText =
+                    `Sorted apples: ${sortedApples};
+                            Small: ${small};
+                            Medium: ${medium};
+                            Big: ${big};
+                            Scrap: ${scrap};
+                            Stats: 
+                                apples sorted: ${appleCount} pc, ${(totalWeightSmall + totalWeightMedium + totalWeightBig)} g;
+                                small apples: ${totalWeightSmall} g;
+                                medium apples: ${totalWeightMedium} g;
+                                big apples: ${totalWeightBig} g`;
+                // Sets cursor into the input field
+                inputElement.focus();
+                // Clears the input field
+                inputElement.value = "";
+            } else {
+                // If the input contains other characters than numbers and commas, alerts the user  
+                alert("Insert only numbers separated with commas!");
+                inputElement.focus();
+                inputElement.value = "";
+            }
+            // Returns required value (a multidimensional array of sorted apples)
+            return sortedApples;
+        }
+
+    </script>
+</body>
+
+</html>
