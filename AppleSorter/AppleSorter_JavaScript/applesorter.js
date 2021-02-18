@@ -39,8 +39,8 @@ function appleSorter(...apples) {
     /* 
     Calculating and outputting stats was not required, 
     but it is quite informative and outputting it would be obvious requirement in the real factory 
-    */ 
-   
+    */
+
     console.log(`
     Sorted apples: ${sortedApples};
     Small: ${small};
