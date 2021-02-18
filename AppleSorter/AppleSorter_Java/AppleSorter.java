@@ -1,3 +1,5 @@
+// Author of this code: GitHub user karinjohanson
+
 /* 
 In Java, once an array is created, it has a fixed size.
 To create mutable and dynamic lists, we can use ArrayLists.
@@ -18,7 +20,7 @@ public class AppleSorter {
         // Scrap records are considered as anomalies and thereby they are not included
         // into sorted apples.
         ArrayList<Integer> scrap = new ArrayList<>();
-        
+
         ArrayList<ArrayList<Integer>> sortedApples = new ArrayList<>();
         ArrayList<Integer> small = new ArrayList<>();
         ArrayList<Integer> medium = new ArrayList<>();
@@ -33,7 +35,7 @@ public class AppleSorter {
         int totalWeightBig = 0;
         int appleCount = 0;
         int totalWeight = 0;
-        
+
         // Taking in user input
         // To test the code, you can use fallowing array as a testinput
         // 29,70,85,77,55,44,33,98,90,47,22,44,55,37,65
@@ -48,7 +50,7 @@ public class AppleSorter {
         ArrayList<Integer> apples = new ArrayList<>();
         for (int i = 0; i < numOfInsertedApples; i++) {
             apples.add(Integer.parseInt(applesArray[i]));
-        } 
+        }
 
         // Sorting apples into categories
         for (int apple : apples) {
@@ -66,15 +68,15 @@ public class AppleSorter {
                 big.add(apple);
             }
         }
-        
+
         appleCount += small.size() + medium.size() + big.size();
         totalWeight = totalWeightSmall + totalWeightMedium + totalWeightBig;
         String stats = "Apples sorted: " + appleCount + " pc, " + totalWeight + " g";
 
         /*
          * System is a built-in Java class, out is short for output and println prints
-         * required value and moves the cursor on the next line
-         * In production code System.out.println should be avoided and replaced by a logger
+         * required value and moves the cursor on the next line In production code
+         * System.out.println should be avoided and replaced by a logger
          */
 
         System.out.println("Sorted apples: " + sortedApples);
