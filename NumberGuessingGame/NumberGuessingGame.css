@@ -1,0 +1,99 @@
+/* 
+Related files: NumberGuessingGame.html, NumberGuessingGame.js
+Author: GitHub user karinjohanson
+*/
+
+body {
+  background-color: rgb(90, 89, 89);
+  font-family: Arial, Helvetica, sans-serif;
+  color: antiquewhite;
+}
+
+div {
+  text-align: center;
+}
+
+h1 {
+  color: rgb(106, 206, 23);
+}
+
+h3 {
+  color: yellowgreen;
+}
+
+#rules {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+}
+
+ul {
+  font-size: 18px;
+  text-align: left;
+}
+
+#instructiveMessage {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: yellowgreen;
+}
+
+#successMessage {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  color: yellow;
+}
+
+#gamebody {
+  text-align: center;
+}
+
+#gamebody p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+input {
+  font-size: 20px;
+}
+
+button {
+  background-color: silver;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+#enter {
+  color: darkcyan;
+}
+
+#reset {
+  color: darkorchid;
+}
+
+table {
+  border: 1px solid silver;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+tr {
+  border: 1px solid silver;
+}
+
+th {
+  border: 1px solid silver;
+  padding: 8px;
+}
+
+td {
+  border: 1px solid silver;
+  padding: 8px;
+}
+
+#informativeMessage {
+  color: yellow;
+}
