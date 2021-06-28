@@ -1,0 +1,86 @@
+<!-- 
+    A program which takes the text (it is a testimonial (in Estonian) for developer named Stack (i.e. Pinu in Estonian)) from 
+    prefilled HTML <textarea> element and on clicking a button, it dynamically creates a new <textarea> element
+    and fills it with the content where only odd rows are present compared to the original text.
+    Note that in the original <textarea> the rows and breaks must be exactly the same. 
+    Here is the testimonial:
+
+    Arendaja Pinu on töötaja, kelle leiate enamasti 
+    uusi lahendusi loomas. Pinu töötab väga efektiivselt, ega käi 
+    tööaega kolleegidega kohvitamise peale raiskamas. Reeglina on 
+    ta lahkesti nõus kolleege juhendama, ning kunagi ei jää seetõttu 
+    tal tööülesanded tähtajaks täitmata. Tihti peab aeganõudvaid lisa- 
+    kohustusi ja oma oskuste täiendamist tähtsamaks kui kohvi- 
+    pause. Teda iseloomustab tõsiasi, et tal pole vähimalgi määral 
+    edevust, olgugi et ta on demonstreerinud äärmiselt põhjalikke 
+    erialaseid teadmisi. Olen kindlalt veendunud, et Pinu ei ole 
+    osakonnas mitte ainult vajalik, vaid noorusele vaatamata lausa 
+    asendamatu töötaja. Soovitan juhatusel Pinu tingimata 
+    edutada, mis võib omakorda ka teistes töötajates motivatsioonipuhangu
+    vallandada.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- This code is created by GitHub user karinjohanson -->
+    <meta name="author" content="karinjohanson">
+    <title>Deciphering testimonial</title>
+    <link rel="stylesheet" href="Testimonial.css">
+</head>
+
+<body>
+    <div class="row, flex-container">
+        <div class="col-12, intro">
+            <h1>Dešifreeri iseloomustus</h1>
+        </div>
+    </div>
+    <div class="row, flex-container">
+        <div class="col-6">
+            <p>Tarkvaraarendaja Pinu koondati päevapealt.
+                Ülemus ulatas naeratades Pinule iseloomustuse, surus kätt ja soovis edu tööotsinguil.
+                Pinu oli rõõmus iseloomustust lugedes, kuid miski jäi ikkagi kripeldama.
+            </p>
+        </div>
+    </div>
+    <div class="row, flex-container">
+        <div class="col-6">
+            <p>Ma kirjutasin Pinu abistamiseks väikese programmi, mis aitab tema iseloomustust dešifreerida.
+                Ole hea ja klõpsa nupul, et Pinu oma tegelikku iseloomustust näeks.
+            </p>
+        </div>
+    </div>
+    <!-- This textarea contains the original testimonial -->
+    <div class="row, flex-container">
+        <div class="col-6, flex-container">
+            <textarea id="originalTestim" rows="14" cols="90">
+                Arendaja Pinu on töötaja, kelle leiate enamasti 
+                uusi lahendusi loomas. Pinu töötab väga efektiivselt, ega käi 
+                tööaega kolleegidega kohvitamise peale raiskamas. Reeglina on 
+                ta lahkesti nõus kolleege juhendama, ning kunagi ei jää seetõttu 
+                tal tööülesanded tähtajaks täitmata. Tihti peab aeganõudvaid lisa-
+                kohustusi ja oma oskuste täiendamist tähtsamaks kui kohvi-
+                pause. Teda iseloomustab tõsiasi, et tal pole vähimalgi määral 
+                edevust, olgugi et ta on demonstreerinud äärmiselt põhjalikke 
+                erialaseid teadmisi. Olen kindlalt veendunud, et Pinu ei ole 
+                osakonnas mitte ainult vajalik, vaid noorusele vaatamata lausa 
+                asendamatu töötaja. Soovitan juhatusel Pinu tingimata 
+                edutada, mis võib omakorda ka teistes töötajates motivatsioonipuhangu 
+                vallandada.
+            </textarea>
+        </div>
+    </div>
+    <!-- Clicking the button triggers deciphering function -->
+    <div class="row, flex-container">
+        <div class="col-1">
+            <button onclick="decipher()">Dešifreeri Pinu iseloomustus</button>
+        </div>
+    </div>
+    <!-- The scripts for JavaScript functions are located in the external js-file -->
+    <script src="Testimonial.js"></script>
+</body>
+
+</html>
